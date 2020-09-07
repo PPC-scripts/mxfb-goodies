@@ -1,0 +1,6 @@
+PACKAGE (VERSION) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+  * added two scripts
+
+ -- j b <jb@X1Cmx>  Mon, 07 Sep 2020 11:38:48 -0400
