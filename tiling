@@ -1,0 +1,15 @@
+Paste this to your ~/.fluxbox/keys file. save the file and restart fluxbox 
+
+### BASIC TILING WINDOWS ###
+# Make active window 1/2 of the screen
+Control 1 :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Left}
+Control 2 :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Right}
+Control 3 :MacroCmd {ResizeTo 100% 50%} {MoveTo 00 00 Up}
+Control 4 :MacroCmd {ResizeTo 100% 50%} {MoveTo 00 00 Bottom}
+# Make active window 1/4 of the screen on the upper left
+Control 5 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 Up}
+Control 6 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 TopRight}
+Control 7 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 BottomLeft}
+Control 8 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 BottomRight}
+# toggle active window: Maximized/ last size
+Control 0 :ToggleCmd {Maximize} {Restore}

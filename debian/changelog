@@ -1,6 +1,7 @@
-PACKAGE (VERSION) UNRELEASED; urgency=medium
+PACKAGE (unknowo) UNRELEASED; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)
-  * added two scripts
+  * added two scripts on appearance buttons and recent files
+  * added a third script on tiling
 
- -- j b <jb@X1Cmx>  Mon, 07 Sep 2020 11:38:48 -0400
+ -- j b <jb@X1Cmx>  Mon, 07 Sep 2020 20:35:45 -0400
