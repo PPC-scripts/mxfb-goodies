@@ -1,12 +1,13 @@
 #! /bin/bash
 
 
-yad --geometry=200x64 --title="Common Appearance Apps" --center  \
+yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky manager":conky-manager2 \
 --button="!/usr/share/icons/Moka/64x64/apps/devhelp.png!Dockmaker":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!Desktop icons":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Themes":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar toggle":toggletint2 \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'thunar /usr/share/backgrounds' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
