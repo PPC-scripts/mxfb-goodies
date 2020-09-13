@@ -3,7 +3,7 @@
 
 yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky manager":conky-manager2 \
---button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker64.png!Dockmaker":mx-dockmaker \
+--button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker.png!Dockmaker":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!Desktop icons":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Themes":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar toggle":toggletint2 \
