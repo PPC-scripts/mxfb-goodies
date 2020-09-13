@@ -1,5 +1,6 @@
 #! /bin/bash
 
+##this app requires the mx-dockmaker Moka icons that are located in /components
 
 yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky manager":conky-manager2 \
