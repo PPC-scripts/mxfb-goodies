@@ -1,6 +1,8 @@
 #! /bin/bash
 
 ##this app requires the mx-dockmaker Moka icons that are located in /components
+##they should be placed in the appropriate section of /usr/share/icons/Moka/
+##it also requires the installation of nitrogen
 
 yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky manager":conky-manager2 \
@@ -8,7 +10,7 @@ yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!Desktop icons":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Themes":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar toggle":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'thunar /home/.fluxbox/backgrounds/' \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'nitrogen /usr/share/backgrounds' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
