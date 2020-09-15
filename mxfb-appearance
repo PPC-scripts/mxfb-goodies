@@ -10,7 +10,7 @@ yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!Desktop icons":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Themes":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar toggle":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'nitrogen /usr/share/backgrounds' \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'nitrogen' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
