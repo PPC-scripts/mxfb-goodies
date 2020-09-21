@@ -14,6 +14,7 @@ Control 5 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 Up}
 Control 6 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 TopRight} 
 Control 7 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 BottomLeft} 
 Control 8 :MacroCmd {ResizeTo 50% 50%} {MoveTo 00 00 BottomRight} 
+Control 9 :MacroCmd {ResizeTo 33% 100%} {MoveTo 00 00 Right}
 # toggle active window: Maximized/ last size 
 Control 0 :ToggleCmd {Maximize} {Restore}" >> ~/.fluxbox/keys 
 fluxbox-remote restart
