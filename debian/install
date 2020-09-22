@@ -4,5 +4,4 @@ components/mx-dockmaker48.png usr/share/icons/Moka/48x48/apps/mx-dockmaker.png
 components/mx-dockmaker64.png usr/share/icons/Moka/64x64/apps/mx-dockmaker.png
 mxfb-appearance usr/bin
 recent_files.sh usr/bin
-shot.sh usr/bin
-tiling usr/bin
+tiles usr/bin
