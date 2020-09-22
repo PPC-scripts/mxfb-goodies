@@ -4,7 +4,6 @@
 ##it has been modified here for use with MX Fluxbox
 
 DESTDIR="${HOME}/Pictures"
-#DESTDIR="${HOME}/bib/realprojekt"
 NAME="`date +%y%m%d_%M%S_`\$wx\$h"
 SUF="png"
 PRE=""
