@@ -5,12 +5,12 @@
 ##it also requires the installation of nitrogen
 
 yad --geometry=200x64 --center --title="Fluxbox Appearance"   \
---button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky manager":conky-manager2 \
---button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker.png!Dockmaker":mx-dockmaker \
+--button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!Conky":conky-manager2 \
+--button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker.png!Docks":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!Desktop icons":mx-idesktool \
---button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Themes":lxappearance \
---button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar toggle":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!Backgrounds":'nitrogen' \
+--button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!Theme":lxappearance \
+--button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!Toolbar":toggletint2 \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!Wallpaper":'nitrogen' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
