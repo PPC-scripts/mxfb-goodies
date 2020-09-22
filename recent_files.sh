@@ -6,6 +6,13 @@
 # works on any system with yad and xdg-open installed, optionally: exo-open (see exceptions to the general rule, when launching files, near the end.
 # https://github.com/jerry3904/mxfb-goodies/blob/master/recent_files.sh
 ============
+
+TEXTDOMAINDIR=/usr/share/locale
+export TEXTDOMAIN="recent_files.sh"
+
+TITLE=$"Recent files"
+TEXT1=$"CLICK HERE TO SORT BY PATH"
+
 #Parse the file that stores the recent used files, send output to recent0.txt
 awk -F"file://|\" " '/file:\/\// {print $2}' ~/.local/share/recently-used.xbel > ~/.recent0.txt
 #reverse order, so last file comes first, etc
@@ -16,8 +23,8 @@ urldecode() {
     printf '%b' "${url_encoded//%/\\x}"
 }
 # select file to execute
-EXEC=$(yad --title="Recent files" --window-icon=/usr/share/icons/mxflux.png --width=400 --height=400 --center --separator=" " --button=gtk-cancel \
---list  --column="--> CLICK HERE TO SORT BY PATH
+EXEC=$(yad --title="$TITLE" --window-icon=/usr/share/icons/mxflux.png --width=400 --height=400 --center --separator=" " --button=gtk-cancel \
+--list  --column="--> $TEXT1
 ----------" < ~/.recent.txt)
 #do decoding on file name, just in case
 decoded=$(urldecode $EXEC)
