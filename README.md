@@ -1,11 +1,9 @@
 # mxfb-goodies
 
-Optional scripts for MX-Fluxbox
+### Optional scripts for MX-Fluxbox**
 
-## mxfb-appearance: provides graphic access to the items under Menu > Appearance (except Style). \n
-Can be used on a dock, in a traditional panel, or as a desktop icon.
+**mxfb-appearance** Provides graphic access to the items under Menu > Appearance (except Style).
 
-## recent_files.sh: presents a clickable list of the files used in the last 30 days, sorted from last to first. \n
-Can be inserted into the rootMenu, or linked with a desktop, dock or panel icon.
+**recent_files.sh** Presents a clickable list of the files used in the last 30 days
 
-## tiles: inserts code into the keys file that enables 1/4, 1/3 or 1/2 screen tiling.
+**tiles** Inserts code into the keys file that enables 1/4, 1/3 or 1/2 screen tiling.
