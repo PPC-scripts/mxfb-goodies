@@ -1,8 +1,8 @@
 #!/bin/bash
 
-### Recent files window- by PPC, 13/1/2020, for use with antiX and MX-fluxbox
+### Recent files window released by PPC, 13/1/2020, for use with antiX and MX-Fluxbox
 ### Modified by MX Linux Devs September 2020
-#GPL3 license- do what you want with this, but please keep lines about the author, date and licence
+#GPLv3 license- do what you want with this, but please keep lines about the author, date and licence
 # works on any system with yad and xdg-open installed, optionally: exo-open (see exceptions to the general rule, when launching files, near the end.
 # https://github.com/jerry3904/mxfb-goodies/blob/master/recent_files.sh
 ============

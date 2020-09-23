@@ -1,9 +1,9 @@
 #! /bin/bash
 
-###mxfb-appearance released September 2020 by MX Linux Devs
-##this app requires the mx-dockmaker Moka icons that are located in /components
-##they should be placed in the appropriate section of /usr/share/icons/Moka/
-##it also requires the installation of nitrogen
+### mxfb-appearance released September 2020 by MX Linux Devs under a GPLv3 license 
+## this app requires the mx-dockmaker Moka icons that are located in /components
+## they should be placed in the appropriate section of /usr/share/icons/Moka/
+## it also requires the installation of nitrogen
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="mxfb-appearance"

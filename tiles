@@ -1,8 +1,8 @@
 #! /bin/bash
 
-#This script installs commands for tiling to the end of the keys file
-#The commands were worked out by user PPC in January 2020 
-#with the exception of "Control 9" which was added by MX Linux Devs.
+# This script installs commands for tiling to the end of the keys file
+# it was created by user PPC and released in January 2020 under GPLv3 
+# "Control 9" was added by MX Linux Devs September 2020
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="tiles"
