@@ -2,7 +2,7 @@
 
 ### Optional scripts for MX-Fluxbox
 
-* **mxfb-appearance** -- Provides graphic access to the items under Menu > Appearance (except Style).
+* **mxfb-appearance** -- Provides graphic access to the most common items under rootMenu > Appearance.
 
 * **recent_files.sh** -- Presents a clickable reversed list of the files used in the last 30 days.
 

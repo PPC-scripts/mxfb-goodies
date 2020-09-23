@@ -12,18 +12,20 @@ TITLE=$"Fluxbox Appearance"
 BUTTON1=$"Conky"
 BUTTON2=$"Docks"
 BUTTON3=$"Desktop icons"
-BUTTON4=$"Theme"
-BUTTON5=$"Toolbar"
-BUTTON6=$"Wallpaper"
+BUTTON4=$"Style"
+BUTTON5=$"Theme"
+BUTTON6=$"Toolbar"
+BUTTON7=$"Wallpaper"
 
 
 yad --geometry=200x64 --center --title=$TITLE  \
 --button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!$BUTTON1":conky-manager2 \
 --button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker.png!$BUTTON2":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!$BUTTON3":mx-idesktool \
---button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON4":lxappearance \
---button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON5":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON6":'nitrogen' \
+--button="""!/usr/share/icons/Moka/64x64/apps/multisystem.png!$BUTTON4":choosefile \
+--button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON5":lxappearance \
+--button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON6":toggletint2 \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":'nitrogen' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
