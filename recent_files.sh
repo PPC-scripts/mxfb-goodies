@@ -5,7 +5,6 @@
 #GPLv3 license- do what you want with this, but please keep lines about the author, date and licence
 # works on any system with yad and xdg-open installed, optionally: exo-open (see exceptions to the general rule, when launching files, near the end.
 # https://github.com/jerry3904/mxfb-goodies/blob/master/recent_files.sh
-============
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="recent_files.sh"
@@ -40,3 +39,5 @@ EXEC2="'"$decoded"'"
 #to open the file
 runny=$(echo $openwith $EXEC2)
 eval $runny
+
+
