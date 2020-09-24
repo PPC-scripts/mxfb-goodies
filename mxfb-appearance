@@ -1,9 +1,10 @@
 #! /bin/bash
 
 ### mxfb-appearance released September 2020 by MX Linux Devs under a GPLv3 license 
-## this app requires the mx-dockmaker Moka icons that are located in /components
+## this app requires the Moka icons that are located in /components
 ## they should be placed in the appropriate section of /usr/share/icons/Moka/
-## it also requires the installation of nitrogen
+## the conky-manager-mxfb and the mx-dockmaer 64 were created by user ceeslans
+## the app also requires the installation of nitrogen
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="mxfb-appearance"
@@ -14,18 +15,18 @@ BUTTON2=$"Docks"
 BUTTON3=$"Desktop icons"
 BUTTON4=$"Style"
 BUTTON5=$"Theme"
-BUTTON6=$"Toolbar"
+BUTTON6=$"Toolbar toggle"
 BUTTON7=$"Wallpaper"
 
 
 yad --geometry=200x64 --center --title=$TITLE  \
---button="!/usr/share/icons/Moka/64x64/apps/conky-manager.png!$BUTTON1":conky-manager2 \
+--button="!/usr/share/icons/Moka/64x64/apps/conky-manager-mxfb.png!$BUTTON1":conky-manager2 \
 --button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker.png!$BUTTON2":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!$BUTTON3":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/multisystem.png!$BUTTON4":choosefile \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON5":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON6":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":'nitrogen' \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":'thunar /usr/share/backgrounds' \
 --window-icon=/usr/share/icons/mxflux.png
 
 
