@@ -7,11 +7,11 @@
 TEXTDOMAINDIR=/usr/share/locale 
 export TEXTDOMAIN="mxfb-separate-backgrounds"
 
-
 #Confirmation Window:
 MESSAGE1=$"  This app allows you to configure separate backgrounds for each Workspace  </b>"
 HINT1=$" Selection windows will pop up for each Workspace."
-HINT2=$" Select the background you want and click OK."
+HINT2=$" Type \"mxfb\" to jump to the MXFB backgrounds."
+HINT3=$" Select the background you want and click OK."
 NOTE1=$" NOTE 1: Background changes using the menu won't be permanent."
 NOTE2=$" NOTE 2:: Re-run this script when you add new workspaces!"
 TITLE=$"MXFB -- separate workspace wallpapers"
@@ -23,14 +23,18 @@ TITLE2=$"Wallpaper selector"
 TITLE3=$"Warning"
 WARNING=$"There is no wallpaper image selected for Workspace $n... Will substitute 'mx_blue.jpg' to avoid any errors."
 
-yad --center --fix-window --text="
+ICON=/usr/share/icons/mxflux.png
+
+yad --center --window-icon=$ICON --fix-window --text="
 <b>$MESSAGE1\n
 
 <b>--$HINT1
---$HINT2 \n
+--$HINT2 
+-- $HINT3 \n
 
---$NOTE1
---$NOTE2</b>"--title=$"$TITLE" --window-icon=$ICON --text-align=center \
+$NOTE1
+$NOTE2</b>" \
+--title=$"$TITLE" --window-icon=$ICON --text-align=center \
 --button="<b>$BUTTON1</b>":1 \
 --button="<b>$BUTTON2</b>":3 \
 --button="<b>$BUTTON3</b>":2 \ 
@@ -90,7 +94,7 @@ for ((n=1;n<=$number_of_workspaces;n++))
 do
  cd /usr/share/backgrounds/
 # select wallpaper:
- wallpaper=$(yad --title="$TITLE2" --file-selection --text="
+ wallpaper=$(yad --title="$TITLE2" --center --window-icon=$ICON --file-selection --text="
  WORKSPACE $n
  " --text-align=center)
  # copy and rename wallpaper to match the current Workspace number:
@@ -107,7 +111,7 @@ fi
  if [ ! -f "$FILE" ]
    then
     echo "File $FILE does not exist, using a default one- mx_blue.jpg"
-    yad --center  --title="$TITLE3" --text="$WARNING"
+    yad --center --window-icon=$ICON--title="$TITLE3" --text="$WARNING"
     cp  /usr/share/backgrounds/mx_blue.jpg ~/.fluxbox/backgrounds/numbered/$n.jpg
  fi
 
