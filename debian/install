@@ -5,5 +5,6 @@ components/mx-dockmaker64.png usr/share/icons/Moka/64x64/apps/mx-dockmaker.png
 components/conky-manager-mxfb /usr/share/icons
 components/choosefile /usr/bin
 mxfb-appearance usr/bin
+mxfb-separate-backgrounds usr/bin
 recent_files.sh usr/bin
 tiles usr/bin

@@ -1,3 +1,9 @@
+unknown (unknown) UNRELEASED; urgency=medium
+
+  * added mxfb-separate-backgrounds
+
+ -- j b <jb@X1Cmx>  Mon, 28 Sep 2020 11:35:35 -0400
+
 mxfb-goodies UNRELEASED; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)

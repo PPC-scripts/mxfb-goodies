@@ -4,7 +4,6 @@
 ## this app requires the Moka icons that are located in /components
 ## they should be placed in the appropriate section of /usr/share/icons/Moka/
 ## the conky-manager-mxfb and the mx-dockmaer 64 were created by user ceeslans
-## the app also requires the installation of nitrogen
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="mxfb-appearance"
@@ -26,7 +25,7 @@ yad --geometry=200x64 --center --title=$TITLE  \
 --button="""!/usr/share/icons/Moka/64x64/apps/multisystem.png!$BUTTON4":choosefile \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON5":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON6":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":nitrogen \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":nitrogen /usr/share/backgrounds \
 --window-icon=/usr/share/icons/mxflux.png
 
 
