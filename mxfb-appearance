@@ -3,7 +3,8 @@
 ### mxfb-appearance released September 2020 by MX Linux Devs under a GPLv3 license 
 ## this app requires the Moka icons that are located in /components
 ## they should be placed in the appropriate section of /usr/share/icons/Moka/
-## the conky-manager-mxfb and the mx-dockmaer 64 were created by user ceeslans
+## it also requires nitrogen for background selection and setting
+## the conky-manager-mxfb and the mx-dockmaker 64 were created by user ceeslans
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="mxfb-appearance"

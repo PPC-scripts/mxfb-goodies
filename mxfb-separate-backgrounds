@@ -13,7 +13,8 @@ HINT1=$" Selection windows will pop up for each Workspace."
 HINT2=$" Type \"mxfb\" to jump to the MXFB backgrounds."
 HINT3=$" Select the background you want and click OK."
 NOTE1=$" NOTE 1: Background changes using the menu won't be permanent."
-NOTE2=$" NOTE 2:: Re-run this script when you add new workspaces!"
+NOTE2=$" NOTE 2: Re-run this script when you add new workspaces!"
+NOTE3=$" NOTE 3: Disable nitrogen in startup file if using that app for image setting"
 TITLE=$"MXFB -- separate workspace wallpapers"
 BUTTON1=$"Cancel"
 BUTTON2=$"Disable separate backgrounds"
@@ -33,7 +34,8 @@ yad --center --window-icon=$ICON --fix-window --text="
 -- $HINT3 \n
 
 $NOTE1
-$NOTE2</b>" \
+$NOTE2
+$NOTE3</b>" \
 --title=$"$TITLE" --window-icon=$ICON --text-align=center \
 --button="<b>$BUTTON1</b>":1 \
 --button="<b>$BUTTON2</b>":3 \

@@ -1,3 +1,9 @@
+mxfb-goodies (20.09.28) mx; urgency=medium
+
+  * final changes for release of v. 1.0
+
+ -- j b <jb@X1Cmx>  Mon, 28 Sep 2020 20:19:54 -0400
+
 mxfb-goodies UNRELEASED; urgency=medium
 
   * added mxfb-separate-backgrounds

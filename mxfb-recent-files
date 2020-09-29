@@ -7,7 +7,7 @@
 # https://github.com/jerry3904/mxfb-goodies/blob/master/recent_files.sh
 
 TEXTDOMAINDIR=/usr/share/locale
-export TEXTDOMAIN="recent_files.sh"
+export TEXTDOMAIN="mxfb-recent-files"
 
 TITLE=$"Recent files"
 TEXT1=$"CLICK HERE TO SORT BY PATH"

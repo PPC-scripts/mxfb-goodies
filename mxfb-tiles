@@ -5,7 +5,7 @@
 # "Control 9" was added by MX Linux Devs September 2020
 
 TEXTDOMAINDIR=/usr/share/locale
-export TEXTDOMAIN="tiles"
+export TEXTDOMAIN="mxfb-tiles"
 
 MESSAGE1=$"This script will back up your current keys file, then install commands for tiling to the end of the file</b>"
 HINT1=$"Control 1-4 for 1/2 screen tiling"
