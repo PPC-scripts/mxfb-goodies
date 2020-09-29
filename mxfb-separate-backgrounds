@@ -83,10 +83,7 @@ fi
 mkdir -p  ~/.fluxbox/backgrounds/numbered/
 
 #Check how many Workspaces Fluxbox currently has:
-expression_to_find="session.screen0.workspaces: "
-x=$(grep $expression_to_find ~/.fluxbox/init)
-#remove the text, leaving only the number of available Workspaces
-number_of_workspaces=$(echo $x | sed s/"$expression_to_find"//)
+number_of_workspaces=$(xdotool get_num_desktops)
 
 #Remove existing numbered wallpapers to avoid failure when wallpaper is symlinked to /usr/share/backgrounds
 rm ~/.fluxbox/backgrounds/numbered/*.jpg
