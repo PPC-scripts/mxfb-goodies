@@ -1,3 +1,10 @@
+mxfb-goodies (20.09.30) mx; urgency=medium
+
+  * corrected icon location
+  * updated README
+
+ -- j b <jb@X1Cmx>  Wed, 30 Sep 2020 14:01:43 -0400
+
 mxfb-goodies (20.09.28) mx; urgency=medium
 
   * final changes for initial release
