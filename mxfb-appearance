@@ -21,7 +21,7 @@ BUTTON7=$"Wallpaper"
 
 yad --geometry=200x64 --center --title=$TITLE  \
 --button="!/usr/share/icons/conky-manager-mxfb.png!$BUTTON1":conky-manager2 \
---button="!/usr/share/icons/Moka/64x64/apps/mx-dockmaker-mxfb.png!$BUTTON2":mx-dockmaker \
+--button="!/usr/share/icons/mx-dockmaker64.png!$BUTTON2":mx-dockmaker \
 --button="""!/usr/share/icons/Moka/64x64/apps/direct-connect.png!$BUTTON3":mx-idesktool \
 --button="""!/usr/share/icons/Moka/64x64/apps/multisystem.png!$BUTTON4":choosefile \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON5":lxappearance \
