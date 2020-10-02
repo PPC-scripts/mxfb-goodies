@@ -1,10 +1,11 @@
 #! /bin/bash
 
-### mxfb-appearance released September 2020 by MX Linux Devs under a GPLv3 license 
+### mxfb-appearance provides graphical access to the entries under rootMenu > Appearance 
+## it was released September 2020 by MX Linux Devs under a GPLv3 license 
 ## this app requires the Moka icons that are located in /components
 ## they should be placed in the appropriate section of /usr/share/icons/Moka/
 ## it also requires nitrogen for background selection and setting
-## the conky-manager-mxfb and the mx-dockmaker 64 were created by user ceeslans
+## the conky-manager-mxfb.png and the mx-dockmaker64.png were created by user ceeslans
 
 TEXTDOMAINDIR=/usr/share/locale
 export TEXTDOMAIN="mxfb-appearance"
@@ -19,6 +20,7 @@ BUTTON6=$"Toolbar toggle"
 BUTTON7=$"Wallpaper"
 
 
+
 yad --geometry=200x64 --center --title=$TITLE  \
 --button="!/usr/share/icons/conky-manager-mxfb.png!$BUTTON1":conky-manager2 \
 --button="!/usr/share/icons/mx-dockmaker64.png!$BUTTON2":mx-dockmaker \
@@ -28,6 +30,9 @@ yad --geometry=200x64 --center --title=$TITLE  \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON6":toggletint2 \
 --button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":nitrogen /usr/share/backgrounds \
 --window-icon=/usr/share/icons/mxflux.png
+
+
+
 
 
 
