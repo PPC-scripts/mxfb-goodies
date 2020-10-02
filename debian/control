@@ -8,7 +8,7 @@ Homepage: https:/mxlinux.org
 
 Package: mxfb-goodies
 Architecture: all
-Depends: nitrogen toggletint2 tint2 mx-fluxbox
+Depends: nitrogen toggletint2 tint2 
 Conflicts: 
 Replaces: 
 Description: Various useful scripts for MX-Fluxbox
