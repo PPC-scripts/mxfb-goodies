@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# José Vieira <jvieira33@sapo.pt>, 2020
+# cmenemrs <cmenemrs@gmail.com>, 2020
+# marcelo cripe <marcelocripe@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-30 21:31-0500\n"
+"PO-Revision-Date: 2020-10-01 02:35+0000\n"
+"Last-Translator: marcelo cripe <marcelocripe@gmail.com>, 2020\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/anticapitalista/teams/10162/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: mxfb-appearance:12
+msgid "Fluxbox Appearance"
+msgstr "Aparência do Fluxbox"
+
+#: mxfb-appearance:13
+msgid "Conky"
+msgstr "Conky"
+
+#: mxfb-appearance:14
+msgid "Docks"
+msgstr "Docas"
+
+#: mxfb-appearance:15
+msgid "Desktop icons"
+msgstr "Ícones da Área de Trabalho"
+
+#: mxfb-appearance:16
+msgid "Style"
+msgstr "Estilo"
+
+#: mxfb-appearance:17
+msgid "Theme"
+msgstr "Tema"
+
+#: mxfb-appearance:18
+msgid "Toolbar toggle"
+msgstr "Alternar Barra de Ferramentas"
+
+#: mxfb-appearance:19
+msgid "Wallpaper"
+msgstr "Papel de Parede"
+
+#: mxfb-recent-files:12
+msgid "Recent files"
+msgstr "Arquivos Recentes"
+
+#: mxfb-recent-files:13
+msgid "CLICK HERE TO SORT BY PATH"
+msgstr "CLIQUE AQUI PARA ORGANIZAR POR CAMINHO"
+
+#: mxfb-separate-backgrounds:11
+msgid ""
+"  This app allows you to configure separate backgrounds for each Workspace  "
+"</b>"
+msgstr ""
+"Este aplicativo permite configurar imagens de fundo diferentes para cada "
+"Área de Trabalho </b>"
+
+#: mxfb-separate-backgrounds:12
+msgid " Selection windows will pop up for each Workspace."
+msgstr "Janelas de seleção serão exibidas para cada Área de Trabalho."
+
+#: mxfb-separate-backgrounds:13
+msgid " Type \\"
+msgstr "Escreva \\"
+
+#: mxfb-tiles:10
+msgid ""
+"This script will back up your current keys file, then install commands for "
+"tiling to the end of the file</b>"
+msgstr ""
+"Este roteiro (script) fará uma cópia de segurança do seu arquivo keys atual "
+"e depois instalará comandos para incluir o \"tiling\" (gerenciador de "
+"janelas lado a lado) no final do arquivo</b>"
+
+#: mxfb-tiles:11
+msgid "Control 1-4 for 1/2 screen tiling"
+msgstr "Ctrl + 1-4 para posicionar a janela ocupando 1/2 tela"
+
+#: mxfb-tiles:12
+msgid "Control 5-8 for 1/4 screen tiling"
+msgstr "Ctrl + 5-8 para posicionar a janela ocupando 1/4 tela"
+
+#: mxfb-tiles:13
+msgid "Control 9 for 1/3 tiling"
+msgstr "Ctrl + 9 para posicionar a janela ocupando 1/3 tela"
+
+#: mxfb-tiles:14
+msgid "Control 0 to maximize"
+msgstr "Ctrl + 0 maximiza a janela"
+
+#: mxfb-tiles:15
+msgid "OK to proceed?"
+msgstr "Continuar?"
+
+#: mxfb-tiles:25
+#, sh-format
+msgid "$TITLE"
+msgstr "$TITLE"
