@@ -28,7 +28,7 @@ yad --geometry=200x64 --center --title=$TITLE  \
 --button="""!/usr/share/icons/Moka/64x64/apps/multisystem.png!$BUTTON4":choosefile \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-themes.png!$BUTTON5":lxappearance \
 --button="""!/usr/share/icons/Moka/64x64/apps/cs-general.png!$BUTTON6":toggletint2 \
---button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":nitrogen /usr/share/backgrounds/ \
+--button="!/usr/share/icons/Moka/64x64/apps/background.png!$BUTTON7":nitrogen \
 --window-icon=/usr/share/icons/mxflux.png
 
 

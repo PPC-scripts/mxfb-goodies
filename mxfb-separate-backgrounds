@@ -55,6 +55,9 @@ exit 0
 
 fi
 
+# set idesk to no rotation to avoid conflict
+sed -i -r 's/Background.Delay:[[:space:]]+1/Background.Delay: 0/' ~/.ideskrc
+
 
 #Check if the keys file has already been edited to allow costume wallpapers for each workspace:
 ##check if the keys file has a ChangeWorkspace entry
@@ -66,7 +69,7 @@ then
       echo "\$x is empty- the keys file has not been edited, editing it to allow different wallpaper for each workspace"
 
 	  #Backup the keys config file:
-      cp ~/.fluxbox/keys ~/.fluxbox/keys_BAK
+      cp ~/.fluxbox/keys ~/.restore/fluxbox/keys_BAK
 
       #Append the needed changes to the keys config file (the "\" is needed not to replace the variables:
       echo "#This executes fbsetbg every time workspace is changed to load <workspace number>.jpg from ~/.fluxbox/backgrounds/numbered/ 
