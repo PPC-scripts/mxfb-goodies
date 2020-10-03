@@ -3,7 +3,7 @@ components/mx-dockmaker48.png usr/share/icons
 components/mx-dockmaker64.png usr/share/icons
 components/conky-manager-mxfb.png usr/share/icons
 components/choosefile /usr/bin
-components/nitrogen/ ~/.config
+components/nitrogen/ etc/skel/.config
 mxfb-appearance usr/bin
 mxfb-separate-backgrounds usr/bin
 mxfb-recent-files usr/bin
