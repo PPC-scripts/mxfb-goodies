@@ -1,0 +1,122 @@
+#!/bin/bash
+
+### mxfb-menu-generator: a tiny script to Create a (non dynamic) fluxbox menu using information on .desktop files, released by PPC, 7/10/2020, under GPLv3
+### Modified by MX Linux Devs for use in MX-Fluxbox
+### TO DOS: populate "Other" sub-menu with applications that don't fit any other category ; Complete support for localization - right now it only allows to localize submenus, not the menu entries
+
+### How to use this script:
+### 1. Copy the script below and paste it into your text editor, saving it in your Home as MXFB_menu_generator.sh
+### 2. Navigate to that file, right click it > Proprieties > "Permissions" tab > Check the last field, to allow this script to run as a program
+### 3. Add the following entry to your menu to access "All Categories" anywhere you want 
+#######################################################################################   
+#[submenu] (All Categories)
+#       [exec] (Update Menu)  {~/MXFB_menu_generator.sh} 
+#       [include] (~/.fluxbox/full_menu)
+#   [end]
+#######################################################################################
+### 4.- Now click menu > All Categories > Update menu. Wait for some seconds while the menu is generated
+
+echo Please wait, creating menu file - stored in ~/.fluxbox/full_menu ...
+echo
+echo If you want to insert this 'All categories'  sub-menu into your MXFB menu:
+echo 'rootmenu > Settings > Menu'
+echo and insert, anywhere you want, this code:
+echo  ' [submenu] (All categories)'
+echo  '  [exec] (Update Menu) {~/MXFB_menu_generator.sh} '
+echo  '  [include] (~/.fluxbox/full_menu)'
+echo  ' [end]'
+echo
+cd ~/.fluxbox/
+#Get system language (to allow localization):
+lang=$(locale | grep LANG | cut -d= -f2 | cut -d_ -f1)
+#Loop through all .desktop files in the applications folder
+for file in /usr/share/applications/*.desktop
+do
+name1=$(grep -o -m 1 '^Name=.*' $file)
+### TODO: localized menu entries generator (slows the script down):
+name=$(echo $name1|sed 's/.*\=//') 
+command1=$(grep -o -m 1 'Exec=.*' $file)
+command=$(echo $command1|sed -E 's/Exec\=//g')
+terminal=$(grep -o -m 1 'Terminal=.*' $file)
+  if [[ $terminal == *"true"* ]]; then
+   command=$(echo xfce4-terminal -e $command1|sed -E 's/Exec\=//g') 
+  fi
+ categories=$(grep -o -m 1 'Categories=.*' $file)
+
+ nodisplay=$(grep -o -m 1 'NoDisplay=.*' $file)
+  if [[ $nodisplay == *"rue"* ]]; then
+    Note="not adding this entry to menu because it has a nodisplay flag"
+   else
+    echo "[exec] ("$name ")" "{" $command "}" $categories
+  fi
+done > /tmp/list.txt
+sort /tmp/list.txt > ~/.fluxbox/pre-global-menu.txt
+rm full_menu
+#fix for repeated synaptic menu entry- first instance does not run, so, delete it:
+sed -i '/{ synaptic }/d' ~/.fluxbox/pre-global-menu.txt
+
+#### Now devide applications into categories:
+#This array has all the available .desktop file categories we want to have on the menu (note: the "." is a quick and dirty workaround, so the script ignores entry nr 0):
+array1=( . Utility Development Game Graphics Network AudioVideo Office System Settings)
+#This array corresponds to the previous one, but it's the "user friendly name" that shows on the menu- NOTE: this can be translated to any language!
+array2=( . Accessories Development Games Graphics Internet Multimedia Office System Settings)
+
+#Begin LOCALIZATION OF Category sub-menus to a language - pt, add equivalent section for other languages:
+    if [[ $lang == *"pt"* ]];
+     then
+		array2=( . Acessórios Desenvolvimento Jogos Graficos Internet Multimédia Escritório Sistema 'Definições globais')
+		echo A criar submenus em Português
+    fi
+#End LOCALIZATION OF Category sub-menus
+    
+#Create the header of the file
+echo '[begin] (All Categories)' >> full_menu
+#Loop through the array- the last number below has to match the number of entries on $array1
+for i in {1..9};
+do 
+ #Create a submenu entry for the current item on $array2
+ echo '[submenu] ('${array2[$i]}')'  >> full_menu
+#Nested loop to check if the item on the current line of the "pre-global-menu.txt" file matches the current item on $array1, if it matches, add it to the "full_menu" file 
+ while read p; 	do
+		if [[ $p =~ ${array1[$i]} ]]
+			then
+				echo $p >> full_menu
+		fi
+	done <~/.fluxbox/pre-global-menu.txt ;
+ echo '[end]' >> full_menu ;	  
+done
+
+#Process only entries that don't fit anywhere else:
+sed -i '/Utility/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Development/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Game/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Graphics/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/AudioVideo/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Office/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/System/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Settings/d' ~/.fluxbox/pre-global-menu.txt
+sed -i '/Network/d' ~/.fluxbox/pre-global-menu.txt
+
+#check if the file is not empty, create last submenu and populate it
+file="~/.fluxbox/pre-global-menu.txt"
+if [ -s "$file" ]
+then 
+ note="empty file, do nothing"
+else
+echo '[submenu] ('Other applications')'  >> full_menu
+  while read p; 	do
+		echo $p >> full_menu
+  done <~/.fluxbox/pre-global-menu.txt ;
+echo '[end]' >> full_menu
+fi
+
+###Fix menu errors, so Libreoffice, etc, work without errors
+delete="%U"
+sed -e s/$delete//g -i full_menu
+delete="%u"
+sed -e s/$delete//g -i full_menu
+delete="%F"
+sed -e s/$delete//g -i full_menu
+delete="%f"
+sed -e s/$delete//g -i full_menu
+echo Menu file created and ready to be used

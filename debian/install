@@ -8,3 +8,4 @@ mxfb-appearance usr/bin
 mxfb-separate-backgrounds usr/bin
 mxfb-recent-files usr/bin
 mxfb-tiles usr/bin
+mxfb-menu-generator usr/bin
