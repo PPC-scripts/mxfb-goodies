@@ -10,7 +10,7 @@ PRE=""
 #### Options. Consult 'man scrot' for other options ####
 #Automatically take a full-screen shot with high quality
 #OPTION="-q 100"
-# Interactively select a window (click on titlebar) or rectangle with the mouse for a high-quality shot.
+# Interactively select a window (click anywhere) or draw a rectangle with the mouse for a high-quality shot.
 OPTION="-s -q 100" 
 
 
