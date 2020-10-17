@@ -35,7 +35,7 @@ yad --text="
 
 <b>$MESSAGE1 \n
 <b>--$HINT1
---$HINT2</b>" --title=$"$TITLE1" --window-icon=/usr/share/icons/mxflux.png --geometry=400x40 --text-align=center 
+--$HINT2</b>" --title=$"$TITLE1" --window-icon=/usr/share/icons/mxflux.png --geometry=400x40 --text-align=center --selectable-labels
 
 ##end first message box
 

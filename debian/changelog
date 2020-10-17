@@ -1,9 +1,10 @@
-mxfb-goodies (20.10.17) UNRELEASED; urgency=medium
+mxfb-goodies (20.10.18) UNRELEASED; urgency=medium
 
   * added new mxfb-menu-generator
   * added key options for mxfb-files
+  * added new mxfb-quickshot
 
- -- j b <jb@X1Cmx>  Sat, 17 Oct 2020 09:36:11 -0400
+ -- j b <jb@X1Cmx>  Sat, 17 Oct 2020 14:39:25 -0400
 
 mxfb-goodies (20.10.03) mx; urgency=medium
 
