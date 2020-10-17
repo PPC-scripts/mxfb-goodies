@@ -9,26 +9,38 @@
 ### 2. Navigate to that file, right click it > Proprieties > "Permissions" tab > Check the last field, to allow this script to run as a program
 ### 3. Add the following entry to your menu to access "All Categories" anywhere you want 
 #######################################################################################   
-#[submenu] (All Categories)
+#[submenu] (All Apps)
 #       [exec] (Update Menu)  {~/MXFB_menu_generator.sh} 
 #       [include] (~/.fluxbox/full_menu)
 #   [end]
 #######################################################################################
-### 4.- Now click menu > All Categories > Update menu. Wait for some seconds while the menu is generated
+### 4.- Now click Menu > All apps > Update menu. Wait for some seconds while the menu is generated
 
-echo Please wait, creating menu file - stored in ~/.fluxbox/full_menu ...
+TEXTDOMAINDIR=/usr/share/locale 
+export TEXTDOMAIN="mxfb-menu-generator"
+
+MSG1="$Please wait, creating menu file ~/.fluxbox/full_menu"
+MSG2="$If you want to insert this new 'All apps' sub-menu into your MXFB menu:"
+MSG3="$click 'Menu > Settings > Configure > Menu'"
+MSG4="$and insert, anywhere you want, this code:"
+MSG5="$not adding this entry to menu because it has a nodisplay flag"
+MSG6="$Menu file created and ready to be used"
+
+echo "$MSG1"
 echo
-echo If you want to insert this 'All categories'  sub-menu into your MXFB menu:
-echo 'rootmenu > Settings > Menu'
-echo and insert, anywhere you want, this code:
-echo  ' [submenu] (All categories)'
+echo "$MSG2"
+echo "$MSG3"
+echo 
+echo  ' [submenu] (All apps)'
 echo  '  [exec] (Update Menu) {~/MXFB_menu_generator.sh} '
 echo  '  [include] (~/.fluxbox/full_menu)'
 echo  ' [end]'
 echo
+
 cd ~/.fluxbox/
 #Get system language (to allow localization):
 lang=$(locale | grep LANG | cut -d= -f2 | cut -d_ -f1)
+
 #Loop through all .desktop files in the applications folder
 for file in /usr/share/applications/*.desktop
 do
@@ -45,32 +57,33 @@ terminal=$(grep -o -m 1 'Terminal=.*' $file)
 
  nodisplay=$(grep -o -m 1 'NoDisplay=.*' $file)
   if [[ $nodisplay == *"rue"* ]]; then
-    Note="not adding this entry to menu because it has a nodisplay flag"
+    Note="$MSG5"
    else
     echo "[exec] ("$name ")" "{" $command "}" $categories
   fi
 done > /tmp/list.txt
 sort /tmp/list.txt > ~/.fluxbox/pre-global-menu.txt
 rm full_menu
-#fix for repeated synaptic menu entry- first instance does not run, so, delete it:
+#fix for repeated synaptic menu entry- first instance does not run, so delete it:
 sed -i '/{ synaptic }/d' ~/.fluxbox/pre-global-menu.txt
 
-#### Now devide applications into categories:
+#### Now divide applications into categories:
 #This array has all the available .desktop file categories we want to have on the menu (note: the "." is a quick and dirty workaround, so the script ignores entry nr 0):
 array1=( . Utility Development Game Graphics Network AudioVideo Office System Settings)
 #This array corresponds to the previous one, but it's the "user friendly name" that shows on the menu- NOTE: this can be translated to any language!
 array2=( . Accessories Development Games Graphics Internet Multimedia Office System Settings)
 
 #Begin LOCALIZATION OF Category sub-menus to a language - pt, add equivalent section for other languages:
-    if [[ $lang == *"pt"* ]];
-     then
-		array2=( . Acessórios Desenvolvimento Jogos Graficos Internet Multimédia Escritório Sistema 'Definições globais')
-		echo A criar submenus em Português
-    fi
+#    if [[ $lang == *"pt"* ]];
+#    then
+#	array2=( . Acessórios Desenvolvimento Jogos Graficos Internet Multimédia Escritório Sistema 'Definições globais')
+#		echo A criar submenus em Português
+#    fi
 #End LOCALIZATION OF Category sub-menus
+## TODO: search external file: components/categories_localization
     
 #Create the header of the file
-echo '[begin] (All Categories)' >> full_menu
+echo '[begin] (All Apps)' >> full_menu
 #Loop through the array- the last number below has to match the number of entries on $array1
 for i in {1..9};
 do 
@@ -119,4 +132,4 @@ delete="%F"
 sed -e s/$delete//g -i full_menu
 delete="%f"
 sed -e s/$delete//g -i full_menu
-echo Menu file created and ready to be used
+echo "$MSG6"
