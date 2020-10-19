@@ -9,8 +9,8 @@
 ### 2. Navigate to that file, right click it > Proprieties > "Permissions" tab > Check the last field, to allow this script to run as a program
 ### 3. Add the following entry to your menu to access "All Categories" anywhere you want 
 #######################################################################################   
-#[submenu] (All Apps)
-#       [exec] (Update Menu)  {~/MXFB_menu_generator.sh} 
+#   [submenu] (All Apps)
+#  
 #       [include] (~/.fluxbox/full_menu)
 #   [end]
 #######################################################################################
@@ -32,7 +32,7 @@ echo "$MSG2"
 echo "$MSG3"
 echo 
 echo  ' [submenu] (All apps)'
-echo  '  [exec] (Update Menu) {~/MXFB_menu_generator.sh} '
+echo  
 echo  '  [include] (~/.fluxbox/full_menu)'
 echo  ' [end]'
 echo
@@ -45,6 +45,7 @@ lang=$(locale | grep LANG | cut -d= -f2 | cut -d_ -f1)
 for file in /usr/share/applications/*.desktop
 do
 name1=$(grep -o -m 1 '^Name=.*' $file)
+[[ $name == *")"* ]] && name=$(echo "${name//)}")
 ### TODO: localized menu entries generator (slows the script down):
 name=$(echo $name1|sed 's/.*\=//') 
 command1=$(grep -o -m 1 'Exec=.*' $file)
@@ -84,6 +85,7 @@ array2=( . Accessories Development Games Graphics Internet Multimedia Office Sys
     
 #Create the header of the file
 echo '[begin] (All Apps)' >> full_menu
+echo  '[exec] (Update Menu) {' $BASH_SOURCE '} ' >> full_menu
 #Loop through the array- the last number below has to match the number of entries on $array1
 for i in {1..9};
 do 
